@@ -13,7 +13,7 @@ _sgdc_total = 0
 
 def train_gnb(train_sets, train_upset, test_sets, test_upset):
     global _gnb, _gnb_correct, _gnb_total
-41a    _gnb = _gnb.partial_fit(train_sets, train_upset, [0, 1])
+    _gnb = _gnb.partial_fit(train_sets, train_upset, [0, 1])
     predictions = _gnb.predict(test_sets)
     zipped_predictions = list(zip(test_upset, predictions))
     run_correct = (test_upset.to_numpy() == predictions).sum()
