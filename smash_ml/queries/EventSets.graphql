@@ -1,0 +1,35 @@
+query EventSets($eventId: ID!, $page: Int!, $perPage:Int!) {
+    event(id: $eventId) {
+        sets(
+            page: $page
+            perPage: $perPage
+            sortType: STANDARD
+        ) {
+            pageInfo {
+                total
+            }
+            nodes {
+                winnerId
+                round
+                slots {
+                    seed {
+                        id
+                        seedNum
+                    }
+                    entrant {
+                        id
+                    }
+                }
+                games {
+                    selections {
+                        entrant {
+                            id
+                        }
+                        selectionValue
+                    }
+                }
+                startedAt
+            }
+        }
+    }
+}

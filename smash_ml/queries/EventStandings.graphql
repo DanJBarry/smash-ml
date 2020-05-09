@@ -1,0 +1,22 @@
+query EventStandings($eventId: ID!, $page: Int!, $perPage:Int!) {
+    event(id: $eventId) {
+        standings(
+            query: {
+                page: $page
+                perPage: $perPage
+            }
+        ) {
+            pageInfo {
+                total
+            }
+            nodes {
+                id
+                stats {
+                    score {
+                        value
+                    }
+                }
+            }
+        }
+    }
+}

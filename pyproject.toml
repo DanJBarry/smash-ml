@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "smash_ml"
+version = "0.1.0"
+description = ""
+authors = ["Daniel Barry <dbarry@stevens.edu>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+aiohttp = {extras = ["speedups"], version = "^3.6.2"}
+pandas = "^1.0.3"
+# idna = "<2.9"
+numexpr = "^2.7.1"
+bottleneck = "^1.3.2"
+scikit-learn = {extras = ["alldeps"], version = "^0.22.2"}
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^19.10b0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

@@ -1,0 +1,6 @@
+query EventEntrants($playerId: ID!) {
+    player(id: $playerId) {
+        prefix
+        gamerTag
+    }
+}

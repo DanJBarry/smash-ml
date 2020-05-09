@@ -1,0 +1,27 @@
+query EventEntrants($eventId: ID!, $page: Int!, $perPage:Int!) {
+    event(id: $eventId) {
+        entrants(
+            query: {
+                page: $page
+                perPage: $perPage
+            }
+        ) {
+            pageInfo {
+                total
+            }
+            nodes {
+                id
+                participants {
+                    player {
+                        id
+                    }
+                }
+                seeds {
+                    id
+                  	seedNum
+                }
+                skill
+            }
+        }
+    }
+}

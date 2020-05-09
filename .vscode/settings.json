@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "/Users/dan/Code/smash_ml/.venv/bin/python3",
+    "python.formatting.provider": "black",
+    "python.poetryPath": "/usr/local/bin/poetry",
+}
